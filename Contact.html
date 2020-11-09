@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact Me</title>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<link rel="stylesheet" href="css.css">
+	<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+</head>
+<body>
+	<nav>
+		
+				<div class="time">
+					<p id="demo"></p>
+					<script>
+					var d=new Date();
+					document.getElementById("demo").innerHTML=d;
+					</script>
+				</div>
+		</div>
+			<div id="nav">
+					<a href="index.html">Home</a>
+					<a href="Contact.html">Contact</a>
+			<div class="scr-btn">
+				<form name="test" onsubmit="validate()">
+				<input type="text" placeholder="what are you looking for" name="test_a">
+				<input type="submit" value="Search" class="raj"></form>
+			</div>
+			</div>
+			<script>
+			function validate(){
+          var abc=document.forms["test"]["test_a"].value;
+          if(abc==""){
+            alert("Empty From. Please fill again");
+          }
+          else{
+            alert("Item not Found.")
+          }
+        }
+        </script>
+	</nav>
+<section class="form1">
+	<h1 style="color: white; padding-top:30px; padding-left: 20px">Contact</h1>
+		<p class="write">Thank you for visiting our website. If you have any problem or want to give us some feedback, please write to us. We are sorry if you have any problem regarding our service. We will try to fix it as soon as possible.</p>
+
+<div class="form">
+  
+  <div class="row1">
+    <div class="column">
+      <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.436308982974!2d85.32037601438033!3d27.70381198279334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19a840580f49%3A0xd34d67fdd3c0f3b1!2sPutalisadak%2C+Kathmandu+44600!5e0!3m2!1sen!2snp!4v1557244826856!5m2!1sen!2snp" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe></p>
+    </div>
+    <div class="column1">
+      <form name="messageForm" onsubmit="ValidateForm()">
+        <p>First Name <input type="text" name="firstname" placeholder="Your name.."></p>
+       
+        <p>Last Name <input type="text" name="lastname" placeholder="Your last name.."></p>
+       
+        <label for="country">Country</label>
+        <select name="country">
+          <option value="Nepal">Nepal</option>
+          <option value="India">India</option>
+          <option value="Canada">Canada</option>
+          <option value="Australia">Australia</option>
+          <option value="USA">USA</option>
+        </select>
+        <p>Email<input type="text" name="Email_Id" placeholder="Email"></p>
+        
+        <p>Message <textarea name="subject" placeholder="Write something.." style="height:170px"></textarea></p>
+       <input type="submit" onclick="validateForm()">
+      </form>
+    </div>
+  </div>
+</div>
+<script>
+	function validateForm(){
+		var fname=document.forms["messageForm"]["firstname"].value;
+		var lname=document.forms["messageForm"]["lastname"].value;
+		var mail=document.forms["messageForm"]["Email_Id"].value;
+		var message=document.forms["messageForm"]["subject"].value;
+		if(fname=="" || lname=="" || mail=="" || message==""){
+			alert("Empty Form. Please fill again");
+		}
+		else{
+			alert("Thank You! for your feedback.")
+		}
+	}
+</script>
+
+</section>
+<footer style="display:flex; flex-direction: column; align-items: center;">
+	<div class="conc">					
+		<a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square" style="margin-right: 15px;"></i></a>
+		<a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram" style="margin-right: 15px;"></i></a>
+		<a href="https://www.google.com/" target="_blank"><i class="fab fa-google"></i></a>	
+	</div>
+						
+	<p id="footerP">Copyright &copy; 2019 kathmandu,Nepal. Internet Technology.</p>
+</footer>
+</body>
+</html>
